@@ -36,7 +36,7 @@ function App() {
     });
     getEmployees();
     window.location.reload(false);
-    getEmployees();
+    //getEmployees();
   };
 
   const getEmployees = () => {
@@ -74,28 +74,41 @@ function App() {
 
   return (
     <div className="App">
+      
       <div className="information">
-        <label>Name:</label>
-        <input type="text" onChange={(event)=> {
-            setName(event.target.value);
-        }} />
-        <label>Age:</label>
-        <input type="number" onChange={(event)=> {
-            setAge(event.target.value);
-        }} />
-        <label>Home Town:</label>
-        <input type="text" onChange={(event)=> {
-            setHome(event.target.value);
-        }} />
-        <label>Position:</label>
-        <input type="text" onChange={(event)=> {
-            setPosition(event.target.value);
-        }} />
-        <label>Salary:</label>
-        <input type="number" onChange={(event)=> {
-            setWage(event.target.value);
-        }} />
-        <button onClick={addEmployee}>Add Employee</button>
+      <img src="https://expr.net/wp-content/uploads/2017/04/Expression-Networks_Logo_Mobile_White_@3x.svg" alt="I tried to steal the expression networks logo from their website"></img>
+      <button onClick={addEmployee}>Add Employee</button>
+        <div>
+          <label>Name:</label>
+          <input type="text" onChange={(event)=> {
+              setName(event.target.value);
+          }} />
+        </div>
+        <div>
+          <label>Age:</label>
+          <input type="number" onChange={(event)=> {
+              setAge(event.target.value);
+          }} />
+        </div>
+        <div>
+            <label>Home Town:</label>
+            <input type="text" onChange={(event)=> {
+                setHome(event.target.value);
+            }} />
+        </div>
+        <div>
+            <label>Position:</label>
+            <input type="text" onChange={(event)=> {
+                setPosition(event.target.value);
+            }} />
+        </div>
+        <div>
+            <label>Salary:</label>
+            <input type="number" onChange={(event)=> {
+                setWage(event.target.value);
+            }} />
+        </div>
+        
       </div>
       <div className="employees">
           <button onClick={getEmployees}>Show Employees</button>
@@ -113,7 +126,7 @@ function App() {
                     <input type="text" placeholder='New Salary...' onChange={(event)=> {
                       setNewWage(event.target.value);
                       }} />
-                    <button onClick={() => {updateEmployeeWage(val.id)}}>Update</button>
+                    <button onClick={() => {updateEmployeeWage(val.id)}}>Update Salary</button>
                     <button onClick={() => {deleteEmployee(val.id)}}>Delete Employee</button>
                   </div>
                </div>
