@@ -26,10 +26,6 @@ app.post('/create', (req, res) => {
         if (err) {
             console.log(err);
         }else {
-            // db.query("SELECT id FROM employees", function(err, result, fields){
-            //     if(err) throw err;
-            //     res.send(result);
-            // });
             res.send("vals inserted");
         }
     });

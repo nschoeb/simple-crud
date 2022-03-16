@@ -30,13 +30,11 @@ function App() {
           home:home, 
           position:position, 
           wage:wage
-          // id:val.id     // not defined yet
         },
       ]);
     });
     getEmployees();
     window.location.reload(false);
-    //getEmployees();
   };
 
   const getEmployees = () => {
